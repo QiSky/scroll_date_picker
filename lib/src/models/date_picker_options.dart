@@ -22,5 +22,5 @@ class DatePickerOptions {
   final bool? isLoop;
 
   /// The color to paint behind the date picker
-  final Color backgroundColor;
+  final Color? backgroundColor;
 }

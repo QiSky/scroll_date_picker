@@ -321,16 +321,18 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
             children: [
               Expanded(
                 child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        widget.options.backgroundColor,
-                        widget.options.backgroundColor.withOpacity(0.7),
-                      ],
-                    ),
-                  ),
+                  decoration: widget.options.backgroundColor == null
+                      ? null
+                      : BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              widget.options.backgroundColor!,
+                              widget.options.backgroundColor!.withOpacity(0.7),
+                            ],
+                          ),
+                        ),
                 ),
               ),
               widget.indicator ??
@@ -343,16 +345,18 @@ class _ScrollDatePickerState extends State<ScrollDatePicker> {
                   ),
               Expanded(
                 child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        widget.options.backgroundColor.withOpacity(0.7),
-                        widget.options.backgroundColor,
-                      ],
-                    ),
-                  ),
+                  decoration: widget.options.backgroundColor == null
+                      ? null
+                      : BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              widget.options.backgroundColor!.withOpacity(0.7),
+                              widget.options.backgroundColor!,
+                            ],
+                          ),
+                        ),
                 ),
               ),
             ],
